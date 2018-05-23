@@ -7947,7 +7947,8 @@ body .bootstrap-datetimepicker-widget table td {
 .top-menu .nav>li>a {
     padding: 10px 20px;
     color: #a8acb1;
-    line-height: 20px
+    line-height: 20px;
+    background: #353535!important;
 }
 
 .top-menu .nav>li>a .badge,
@@ -9243,10 +9244,12 @@ select.form-control{
 }
 
 .top-right-admin-part{
-    width: 100%;
+    width: 86%;
     background-color: transparent;
     height: 50px;
     margin-bottom: 10px;
+    position: fixed;
+    z-index: 5;
 }
 
 .dropdown-user{
@@ -9375,6 +9378,7 @@ select.form-control{
 
 .main-page-panel{
     width: 95%!important;
+    margin-top: 70px;
 }
 
 .panel-gatway .panel-body{
@@ -9449,3 +9453,223 @@ select.form-control{
 .fixer-three.gateway{
     text-align: right;
 }
+
+.first-step-info{
+    background: white;
+    text-align: center;
+    padding: 30px 230px;
+}
+
+.info-header{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.info-text{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.flex-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-info .info-item{
+    color: #488ae8;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.second-step-info,.three-step-info,.four-step-info{
+    text-align: center;
+    background: white;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.second-step-info .info-text{
+    text-align: left;
+}
+
+.flex-buy{
+    background: #4A4A4A;
+    display: flex;
+
+}
+
+.buy-item{
+    text-align: center;
+    width: 50%;
+}
+
+.step-number{
+    color: #488ae8;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.buy-foot{
+    background: #488ae8;
+    color: white;
+}
+
+.input-buy{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.under-input{
+    font-size: 10px;
+    color: #9B9B9B;
+    margin-top: 10px;
+}
+
+.input-buy::-webkit-input-placeholder {color:white;}
+.input-buy::-moz-placeholder          {color:white;}/* Firefox 19+ */
+.input-buy:-moz-placeholder           {color:white;}/* Firefox 18- */
+.input-buy:-ms-input-placeholder      {color:white;}
+
+.select-body{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.under-input,.select-body{
+    height: 60px;
+    padding-top: 10px;
+}
+
+.select-body select{
+    background-color: #488ae8 !important;
+    color: white;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    outline: none;
+    margin-top: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.foot-text{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.buy-foot{
+    padding: 15px 0;
+}
+
+.buy-foot .foot-text:nth-child(2){
+    color: white;
+    font-size: 24px;
+}
+
+.three-step-info .info-text{
+    color: #856404;
+    background-color: #fff3cd;
+    padding: 15px;
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.three-step-info .info-text{
+    margin-top: 20px;
+}
+
+.deposit-foot{
+    display: flex;
+    justify-content: space-between;
+}
+
+.deposit-input{
+    padding: 10px 75px;
+    font-size: 14px;
+    border:none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.deposit-submit{
+    background: #488ae8 !important;
+    border: none;
+    color: white;
+    padding: 10px 60px;
+    opacity: 0.7;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.flex-amount{
+    display: flex;
+    align-items: center;
+}
+
+.flex-amount .info-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: 800;
+}
+
+.coin-amount{
+    width: 150px;
+    background: #8080802b;
+    color: black;
+    text-align: right;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.checkbox{
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px!important;
+}
+
+.footer-steps{
+    background: white;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #8080805c;
+    padding-top: 20px;
+}
+
+.step-half{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buy-line{
+    position: relative;
+    width: 1px;
+    background: black;
+}
+
+.buy-line .glyphicon{
+    position: absolute;
+    top: 20%;
+    right: -23px;
+    background: #488ae8;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+
