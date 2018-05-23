@@ -8,7 +8,7 @@
 
 @include('admin.layout.header')
 
-<div class="clearfix"> </div>
+<div class="clearfix"></div>
 
 @include('admin.layout.container')
 
@@ -16,6 +16,6 @@
 
 @include('admin.layout.scripts')
 
-    </body>
+</body>
 
 </html>
