@@ -62,6 +62,7 @@ Route::get('/referal', 'HomeController@referal')->name('referal');
 Route::get('/my-coin', 'HomeController@myCoin')->name('myCoin');
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile-update', 'ProfileController@update')->name('profile.update');
+Route::post('/background-update', 'ProfileController@background')->name('profile.update-background');
 
 //Buy ICO
 Route::get('/buy-ico', 'HomeController@buyIco')->name('buy.ico');

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<html>
 
 @include('admin.layout.head')
 

@@ -8,6 +8,7 @@
         $icos = \App\Ico::where('status','!=',3)->get();
     @endphp
 
+    <!--suppress ALL -->
     <div class="row">
         <div class="top-right-admin-part">
             <div class="top-menu">
@@ -17,7 +18,7 @@
                            data-close-others="true">
                             <i class="icon-user"></i>
                             <span class="username username-hide-on-mobile">
-                            {{{ isset(Auth::user()->email) ? Auth::user()->email : "" }}}
+                            {{ isset(Auth::user()->email) ? Auth::user()->email : "" }}
                         </span>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -61,37 +62,37 @@
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item">
                                             <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}"
-                                                 alt="">
+                                                 alt="scheme-1.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -229,9 +230,7 @@
 
         $(".customize-items .item img").click(function () {
             var bg_code;
-
             bg_code = $(this).attr('src');
-
             $(".page-content-wrapper").css("background", 'url(' + bg_code + ')');
         });
 

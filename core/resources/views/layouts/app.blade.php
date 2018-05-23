@@ -78,7 +78,7 @@
 
                 var winHeight = $(window).height();
                     $('#contact').css({
-                        'min-height':winHeight,
+                        'min-height':winHeight
                     });
         </script>
 
