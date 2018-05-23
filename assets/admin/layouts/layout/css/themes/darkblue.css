@@ -830,8 +830,23 @@ span.selected{
   display: flex;
   justify-content: space-between;
   border: none;
+  padding: 10px 0px;
+  margin: 0;
   background-color: transparent;
   border-bottom: 1px solid white;
+  color: white;
+}
+
+.sms-portlet{
+  margin: 0 auto;
+  width: 80%!important;
+}
+
+.sms-portlet table{
+  color: black;
+}
+
+tbody tr:first-child{
   color: white;
 }
 
@@ -855,31 +870,39 @@ span.selected{
 }
 
 .send-btn{
-  background-color: #FC4F44;
-  border-color: #FC4F44!important;
+  background: #c94b4b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none!important;
   border-radius: 0;
   width: 70%;
   margin: 0 auto;
+  padding: 27px 10px;
   margin-top: 20px;
+
 }
 
 .send-btn:hover{
   background-color: #182140!important;
-  border-color: #182140!important;
+  outline: 1px solid white!important;
 }
 
 .change-btn{
   background-color: #f15e29;
-  border-color: #f15e29!important;
+  background: #f85032;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none!important;
   border-radius: 0;
   width: 70%;
   margin: 0 auto;
   margin-top: 20px;
+  padding: 27px 10px;
 }
 
 .change-btn:hover,.change-btn:focus{
   background-color: #182140!important;
-  border-color: #182140!important;
+  outline: 1px solid white!important;
 }
 
 .btn-success .toggle-handle {
@@ -908,6 +931,51 @@ span.selected{
   border-radius: 0!important;
   background: transparent;
   color: white;
+}
+
+
+.edit-ico-field{
+  border-radius: 5px!important;
+}
+
+.edit-ico-field .calend input{
+  border-radius: 5px  0 0 5px!important;
+}
+
+.form-control {
+  padding: 0px 12px!important;
+}
+
+table .fa-edit {
+  color: black;
+  font-weight: 600;
+}
+
+.new-ico-btn .icon-plus{
+  position: relative;
+  top: 1px;
+}
+
+.save-btn{
+  background-color: #fc4f44;
+  margin: 0 auto;
+  height: auto!important;
+  border: none;
+  border-radius: 0;
+  width: 40%!important;
+  margin-top: 15px!important;
+}
+
+.save-btn:hover{
+  background: #182140!important;
+}
+
+.no-pad-left{
+  padding-left: 0!important;
+}
+
+.no-pad-right{
+  padding-right: 0!important;
 }
 
 .border-true{
@@ -1023,11 +1091,13 @@ border-radius: 50px!important;
   margin-top: 10px;
   border-radius: 3px;
   box-shadow: 0px 1px 5px #a7a5a5;
+  background: #ffffff2e;
+  margin: 15px 15px 0;
 }
 
 .panel-title {
   margin-top: 0;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   font-weight: 600;
   text-transform: uppercase;
@@ -1093,16 +1163,198 @@ border-radius: 50px!important;
   overflow: visible;
 }
 
+.no-flex{
+  display: block;
+}
+
+.gateways-body .panel-heading{
+  background: transparent;
+  color: white;
+}
+
+.gateways-body .panel-primary{
+  background: #1d2233;
+  border: none;
+}
+
+.gateways-body .panel-heading{
+
+  border: none;
+  border-color: transparent;
+  text-align: left;
+  padding-left: 30px;
+  border-bottom: 1px solid white;
+  background: #1d2233;
+  background: -webkit-linear-gradient(to right, #1d2233, #414965);
+  background: linear-gradient(to right, #1d2233, #414965);
+}
+
+.gateways-body .list-group-item{
+  padding: 0;
+  border: none;
+}
+
+.gateways-body .btn{
+  border-radius: 0;
+}
+
+.gateways-body .btn-block {
+  text-transform: uppercase;
+  opacity: 0.6;
+  background: #182140;
+}
+
+.gateways-body .btn-block:hover{
+  opacity: 1;
+}
+
+
+.gateways-body .btn-success {
+  opacity: 0.6;
+  background: #219a68;
+}
+
+.gateways-body .btn-success:hover{
+  opacity: 1;
+}
+
+.gateways-body .panel-body {
+  padding: 0px;
+}
+
+.new-ico-btn{
+  width: 100%!important;
+  height: 30px!important;
+  background-color: #2f7081;
+  border-color: #2f7081;
+}
+
+.date-picker{
+  background-color: transparent!important;
+  border: 2px solid white;
+  border-radius: 5px 0 0 5px!important;
+}
+
+.general-settings-row .btn-success {
+  width: 71% !important;
+}
+
+.general-settings-row  .btn-danger {
+  width: 71% !important;
+}
+
+.last-row-settings input{
+  background-color: transparent!important;
+  border: 2px solid white;
+  color: white;
+}
+
+
+
+.general-settings-row .input-group,.general-settings-row input{
+  height: 46px;
+  margin-bottom: 30px;
+}
+
+
+.update-btn:hover{
+  background: #182140!important;
+  border-color: #182140!important;
+}
+
+.status-text{
+  color: #182140!important;
+}
+
+.gateways-body .btn-success {
+  width: 100% !important;
+}
+
+.gateways-body select{
+  border: 1.5px solid #182140!important;
+  border-radius: 5px!important;
+}
+
+
+
+.gateways-body .panel-heading:before{
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #f7931b;
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.gateways-body .button-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  margin-top: -35px;
+}
+
+.nicEdit-main{
+  background-color: #000000a8;
+  padding-left: 20px;
+  padding-top: 20px;
+  outline: none;
+}
+
+.edit-ico-field .login-field{
+  margin: 0!important;
+  border: 1.5px solid #182140!important;
+  border-radius: 5px!important;
+}
+
+.edit-ico-field  .input-group-addon{
+  border: 1.5px solid #182140!important;
+}
+
+.submit-btn.broad-email{
+  width: 30%;
+  background: #FC4F44;
+  border: none;
+  padding-top: 15px!important;
+  padding-bottom: 15px!important;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.submit-btn.broad-email:hover{
+  background: #182140!important;
+}
+
+.edit-ico-field .calendar-input{
+  border-left: none!important;
+}
+
+.edit-ico-field label{
+  color: #182140!important;
+}
+
+.edit-ico-field select{
+  border: 1.5px solid #182140!important;
+}
+
+.gateways-body .btn-block+.btn-block {
+  margin-top: 0px;
+}
+
 .panel-success{
   background: #2f7081;
-  background: -webkit-linear-gradient(to left, #181818, #2f7081);
-  background: linear-gradient(to left, #181818, #2f7081);
+  background: -webkit-linear-gradient(to left, #133038, #2f7081);
+  background: linear-gradient(to left, #133038, #2f7081);
 }
 
 .panel-warning{
-  background: #b9771f;
-  background: -webkit-linear-gradient(to left, #181818, #b9771f);
-  background: linear-gradient(to left, #181818, #b9771f);
+  background: #825315;
+  background: -webkit-linear-gradient(to left, #825315, #b9771f);
+  background: linear-gradient(to left, #825315, #b9771f);
 }
 
   /****

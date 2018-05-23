@@ -218,6 +218,8 @@
         $(".page-content-wrapper").css("background",'url('+bg_code+')');
     });
 
+    $( ".page-sidebar-menu" ).after( "<span class='mobile-menu-btn'>&#8251</span>" );
+
 
     $(".drop-link").click(function () {
         $(".drop-settings-inner").toggleClass("open-drop");
@@ -230,6 +232,17 @@
         $(".open-drop").animate({right: 0}, 1000);
         $(".close-drop").animate({right: -350}, 1000);
     });
+
+    $(".mobile-menu-btn").click(function () {
+        $(".page-sidebar.navbar-collapse.collapse").toggleClass("open-menu");
+        $(".page-sidebar.navbar-collapse.collapse").toggleClass("close-menu");
+
+        $(".open-menu").animate({left: 0}, 1000);
+        $(".close-menu").animate({left: -450}, 1000);
+    });
+
+
+
 </script>
 
 @endsection

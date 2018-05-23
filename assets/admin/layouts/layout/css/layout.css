@@ -1279,7 +1279,7 @@ Page sidebar
     .page-sidebar .sidebar-toggler {
       display: none; }
     .page-sidebar .selected {
-      display: none !important; }
+       }
     .page-sidebar.navbar-collapse {
       max-height: none;
       /* set some max height to have a scrollable menu on mobile devices */ }

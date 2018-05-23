@@ -17,7 +17,7 @@
 <link href="{{ asset('assets/user/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('assets/user/css/animate.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('assets/user/css/style.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets/user/css/style-responsive.min.css') }}" rel="stylesheet" />
+<link href="{{ asset('assets/user/css/style-responsive.min.css') }}" rel="stylesheet" /><link href="{{ asset('assets/user/css/style-responsive.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('assets/user/css/theme/default.css') }}" rel="stylesheet" id="theme" />
 <!-- ================== END BASE CSS STYLE ================== -->
 
@@ -37,32 +37,7 @@
 
 <div id="page-loader" class="fade in"><span class="spinner"></span></div>
 
-<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
-
-<div id="header" class="header navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<a href="{{route('home')}}" class="navbar-brand">
-<img class="img-responsive" src="{{ asset('assets/images/logo/logo.png') }}" style="max-width: 60%; ">
-</a>
-<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-</div>
-
-<ul class="nav navbar-nav navbar-right">
-<li class="dropdown">
-<a href="#" style="font-size: 20px; color:#fff; margin-right: 20px;">{{$gnl->cur}} Balance = {{number_format(floatval(Auth::user()->balance) , $gnl->decimal, '.', '')}} {{$gnl->cursym}}</a>
-</li>
-<li class="dropdown">
-<a href="#" style="font-size: 20px; color:#fff; margin-right: 20px;">1 {{$gnl->cur}} = {{number_format(floatval($icorate) , $gnl->decimal, '.', '')}} USD</a>
-</li>
-</ul>
-
-</div>
-</div>
+<div id="page-container" class="fade page-sidebar-fixed page-header-fixed" style="">
 
 @include('layouts.sidebar')
 <div id="content" class="content">
@@ -110,6 +85,30 @@
   ga('create', 'UA-53034621-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+
+    $(".customize-items .item img").click(function () {
+        var bg_code;
+
+        bg_code = $(this).attr('src');
+
+        $(".pace-done").css("background",'url('+bg_code+')');
+    });
+
+
+    $(".open-link").click(function () {
+        $(".drop-settings-inner").toggleClass("open-drop");
+        $(".drop-settings-inner").toggleClass("close-drop");
+
+        $(".drop-settings").toggleClass("active-cast");
+
+
+
+        $(".open-drop").animate({right: 10}, 1000);
+        $(".close-drop").animate({right: -350}, 1000);
+    });
 </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <div class="page-sidebar-wrapper">
 
-    <div class="page-sidebar navbar-collapse collapse">
+    <div class="page-sidebar navbar-collapse collapse close-menu">
 
         <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 
@@ -115,85 +115,6 @@
                         <a href="{{route('sms.api')}}" class="nav-link ">
                             <i class="fa fa-envelope"></i>
                             <span class="title">SMS API</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item @if(request()->path() == 'admin/faq') active open
-            @elseif(request()->path() == 'admin/road') active open 
-            @elseif(request()->path() == 'admin/testim') active open 
-            @elseif(request()->path() == 'admin/services') active open 
-            @elseif(request()->path() == 'admin/teams') active open 
-            @elseif(request()->path() == 'admin/banner') active open 
-            @elseif(request()->path() == 'admin/about') active open 
-            @elseif(request()->path() == 'admin/subsc') active open 
-            @elseif(request()->path() == 'admin/footer') active open 
-            @elseif(request()->path() == 'admin/background') active open 
-            @endif">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-cogs"></i>
-                    <span class="title">Frontend Content</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item @if(request()->path() == 'admin/banner') active open @endif">
-                        <a href="{{route('banner')}}" class="nav-link ">
-                            <i class="fa fa-cog"></i>
-                            <span class="title">Banner</span>
-                        </a>
-                    </li>
-                    <li class="nav-item @if(request()->path() == 'admin/about') active open @endif">
-                        <a href="{{route('about')}}" class="nav-link ">
-                            <i class="fa fa-cog"></i>
-                            <span class="title">About Section</span>
-                        </a>
-                    </li>
-                    <li class="nav-item @if(request()->path() == 'admin/faq') active open @endif">
-                        <a href="{{route('faq.index')}}" class="nav-link ">
-                            <i class="fa fa-question"></i>
-                            <span class="title">Faq</span>
-                        </a>
-                    </li>
-                    <li class="nav-item @if(request()->path() == 'admin/road') active open @endif">
-                        <a href="{{route('road.index')}}" class="nav-link ">
-                            <i class="fa fa-cog"></i>
-                            <span class="title">Road Map</span>
-                        </a>
-                    </li>
-                     <li class="nav-item @if(request()->path() == 'admin/testim') active open @endif">
-                        <a href="{{route('testim.index')}}" class="nav-link ">
-                            <i class="fa fa-cog""></i>
-                            <span class="title">Testimonial</span>
-                        </a>
-                    </li>
-                    <li class="nav-item @if(request()->path() == 'admin/services') active open @endif">
-                        <a href="{{route('services.index')}}" class="nav-link ">
-                            <i class="fa fa-cog""></i>
-                            <span class="title">Services</span>
-                        </a>
-                    </li>
-                      <li class="nav-item @if(request()->path() == 'admin/teams') active open @endif">
-                        <a href="{{route('teams.index')}}" class="nav-link ">
-                            <i class="fa fa-users""></i>
-                            <span class="title">Team Members</span>
-                        </a>
-                    </li>
-                    <li class="nav-item @if(request()->path() == 'admin/subsc') active open @endif">
-                        <a href="{{route('subsc')}}" class="nav-link ">
-                            <i class="fa fa-cog""></i>
-                            <span class="title">Subscriber Section</span>
-                        </a>
-                    </li> 
-                     <li class="nav-item @if(request()->path() == 'admin/footer') active open @endif">
-                        <a href="{{route('footer')}}" class="nav-link ">
-                            <i class="fa fa-cog""></i>
-                            <span class="title">Footer And ICO Section</span>
-                        </a>
-                    </li> 
-                    <li class="nav-item @if(request()->path() == 'admin/background') active open @endif">
-                        <a href="{{route('background')}}" class="nav-link ">
-                            <i class="fa fa-picture-o""></i>
-                            <span class="title">Background Image</span>
                         </a>
                     </li>
                 </ul>

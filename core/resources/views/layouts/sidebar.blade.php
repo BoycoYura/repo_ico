@@ -1,6 +1,11 @@
 <div id="sidebar" class="sidebar">
   <div data-scrollbar="true" data-height="100%">
     <ul class="nav text-center">
+      <li class="no-hover page-logo">
+        <a href="{{route('home')}}">
+          <img src="{{ asset('assets/images/logo/repo-logo.png') }}" style="max-height: 16; max-width: 100px;" class="img-respossive">
+        </a>
+      </li>
       <li class="nav-profile">
         <div class="info text-center">
           <img src="{{asset('assets/images/profile')}}/{{Auth::user()->photo}}" class="img-responsive img-rounded" style="max-height:70px; max-width: 70px; margin: auto;">
@@ -10,7 +15,7 @@
         </div>
       </li>
     </ul>
-    <ul class="nav" style="text-transform: uppercase;">
+    <ul class="nav main-naver" style="text-transform: uppercase;">
       <li class="@if(request()->path() == 'home') active @endif"><a href="{{route('home')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li> 
        <li class="@if(request()->path() == 'home/profile') active @endif"><a href="{{route('profile')}}"><i class="fa fa-user"></i> <span>Profile</span></a></li> 
       <li class="@if(request()->path() == 'home/referal') active @endif"><a href="{{route('referal')}}"><i class="fa fa-users" aria-hidden="true"></i> <span>Reference log</span></a></li>

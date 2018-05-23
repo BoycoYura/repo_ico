@@ -14,43 +14,37 @@
 			<div class="portlet-body form">
 				<form role="form" method="POST" action="{{route('general.update')}}">
 					{{ csrf_field() }}
-					<div class="row">
-						<div class="col-md-4">
-							<h4>Website Title</h4>
-							<input type="text" class="form-control input-lg" value="{{$general->title}}" name="title" >
+					<div class="row general-settings-row">
+						<div class="col-md-6">
+							<input type="text" class="login-field form-control input-lg" value="{{$general->title}}" name="title" placeholder="Website Title">
 						</div>
-						<div class="col-md-4">
-							<h4>Website Sub-Title</h4>
-							<input type="text" class="form-control input-lg" value="{{$general->subtitle}}" name="subtitle" >
+						<div class="col-md-6">
+							<input type="text" class="login-field form-control input-lg" value="{{$general->cursym}}" name="cursym" placeholder="BASE CURRENCY SYMBOL">
 						</div>
-						<div class="col-md-3">
-							<h4>Start Date</h4>
-                            <div class="input-group">
-                            	<input type="text" class="form-control form-control-inline input-medium date-picker" readonly name="startdate" data-date-format="yyyy-mm-dd" value="{{$general->startdate}}">
-									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            </div>
-                           
-						</div>
-					</div>
-					<div class="row">
-						<hr/>
-						<div class="col-md-4">
-							<h4>BASE COLOR CODE</h4>
-							<input type="color" class="form-control input-lg"  value="#{{$general->color}}" name="color"  >
+						<div class="col-md-6">
+							<input type="text" class="login-field form-control input-lg" value="{{$general->subtitle}}" name="subtitle" placeholder="Website Sub-Title">
 						</div>
 
-						<div class="col-md-4">
-							<h4>BASE CURRENCY CODE</h4>
-							<input type="text" class="form-control input-lg" value="{{$general->cur}}" name="cur" >
-						</div>
-						<div class="col-md-4">
-							<h4>BASE CURRENCY SYMBOL</h4>
-							<input type="text" class="form-control input-lg" value="{{$general->cursym}}" name="cursym" >
-						</div>
-					</div>
 
-					<hr/>
-					<div class="row">
+
+
+						<div class="col-md-6">
+							<input type="text" class="login-field form-control input-lg" value="{{$general->cur}}" name="cur" placeholder="BASE CURRENCY CODE">
+						</div>
+
+						<div class="col-md-6">
+							<div class="input-group">
+								<input type="text" class="login-field date-field form-control form-control-inline input-medium date-picker" readonly name="startdate" data-date-format="yyyy-mm-dd" placeholder="Start Date" value="{{$general->startdate}}">
+								<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+							</div>
+
+						</div>
+						<div class="col-md-6">
+							<input type="color" class="login-field form-control input-lg"  value="#{{$general->color}}" name="color"  placeholder="BASE COLOR CODE">
+						</div>
+
+					</div>
+					<div class="row general-settings-row">
 						<hr/>
 						<div class="col-md-4">
 							<h4>Registration</h4>
@@ -66,7 +60,7 @@
 							<input data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-width="100%" type="checkbox" value="1" name="smsver"  {{ $general->smsver == "0" ? 'checked' : '' }}>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row last-row-settings">
 						<hr/>
 						<div class="col-md-3">
 							<h4>DECIMAL AFTER POINT</h4>
@@ -92,7 +86,7 @@
 					<div class="row">
 						<hr/>
 						<div class="col-md-6 col-md-offset-3">
-							<button class="btn blue btn-block btn-lg">Update</button>
+							<button class="btn blue btn-block btn-lg update-btn">Update</button>
 						</div>
 					</div>
 			</form>

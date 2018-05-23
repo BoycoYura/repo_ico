@@ -13,7 +13,6 @@
 
             </div>
             <div class="portlet-body">
-
                  <form class="login-form" role="form" method="POST" action="{{ route('password.update') }}">
                    {{ csrf_field() }}
                 <div class="form-group" >

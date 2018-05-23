@@ -9,7 +9,7 @@
 <span class="caption-subject bold uppercase">ICO Management</span>
 </div>
                      <div class="actions">
-                        <a class="btn btn-circle btn-lg btn-success" data-toggle="modal" data-target="#addico">
+                        <a class="btn btn-circle btn-lg btn-success new-ico-btn" data-toggle="modal" data-target="#addico">
                            <i class="icon-plus"></i> New ICO
                         </a>
                     </div>
@@ -31,7 +31,7 @@
 							<td>{{$ico->end}}</td>
 							<td>{{$ico->quant}} {{$gnl->cur}}</td>
               <td>{{$ico->price}} USD</td>
-							<td>{{$ico->sold}} <br/>
+							<td class="need-cell">{{$ico->sold}} <br/>
                 <div class="progress">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{($ico->sold/$ico->quant)*100}}"
                   aria-valuemin="0" aria-valuemax="100" style="width:{{($ico->sold/$ico->quant)*100}}%">
@@ -42,11 +42,11 @@
 							<td>
             
             @if($ico->status == 1)
-            <span style="background-color:#ffcc66; color: #fff; padding:5px;">Runing</span>
+            <span style="background-color:#2f7081;padding: 15px 20px!important; text-align: center;  width: 105px;display: inline-block; w color: #fff; padding:5px;">Runing</span>
             @elseif($ico->status == 0)
-            <span style="background-color:#00ccff; color: #fff; padding:5px;">Upcoming</span>
+            <span style="background-color:#b9771f;padding: 15px 20px!important; text-align: center;  width: 105px;display: inline-block; color: #fff; padding:5px;">Upcoming</span>
             @else
-            <span style="background-color:red; color: #fff; padding:5px;">Completed</span>
+            <span style="background-color:#dd1818;padding: 15px 20px!important; text-align: center;  width: 105px;display: inline-block; color: #fff; padding:5px;">Completed</span>
             @endif
 							                  </td>
 							<td>
@@ -69,33 +69,33 @@
                 <form role="form" method="POST" action="{{route('ico.update', $ico)}}">
                  {{ csrf_field() }}
                  {{method_field('put')}}
-                 <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-left">
                         <label>ICO Start Date</label>
-                        <div class="input-group">
-                          <input type="text" name="start" data-date-format="yyyy-mm-dd" class="form-control form-control-inline  date-picker" value="{{$ico->start}}" readonly />
-              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <div class="input-group calend">
+                          <input type="text" name="start" data-date-format="yyyy-mm-dd" class=" dark-bottom login-field form-control form-control-inline  date-picker" value="{{$ico->start}}" readonly />
+              <span class="input-group-addon calendar-input"><i class="fa fa-calendar"></i></span>
                         </div>
                     </div> 
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-right">
                         <label>ICO End Date</label>
-                        <div class="input-group">
-                        	<input type="text" name="end" data-date-format="yyyy-mm-dd" class="form-control form-control-inline  date-picker" value="{{$ico->end}}" readonly />
-							<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <div class="input-group calend">
+                        	<input type="text" name="end" data-date-format="yyyy-mm-dd" class="dark-bottom login-field form-control form-control-inline  date-picker" value="{{$ico->end}}" readonly />
+							<span class="input-group-addon calendar-input"><i class="fa fa-calendar"></i></span>
                         </div>
                     </div> 
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-left">
                         <label for="quant" >{{$gnl->cur}} Token (Total Quantity to Sell)</label>
-                        <input type="text" value="{{$ico->quant}}" name="quant" class="form-control">
+                        <input type="text" value="{{$ico->quant}}" name="quant" class="dark-bottom login-field form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-right">
                         <label for="price">Price</label>
-                        <input type="text" value="{{$ico->price}}" name="price" class="form-control">
+                        <input type="text" value="{{$ico->price}}" name="price" class="dark-bottom login-field form-control">
                     </div>
-                     <div class="form-group">
+                     <div class="form-group edit-ico-field col-lg-6 no-pad-left">
                         <label for="sold">Sold</label>
-                        <input type="text" value="{{$ico->sold}}" name="sold" class="form-control">
+                        <input type="text" value="{{$ico->sold}}" name="sold" class="dark-bottom login-field form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-right">
                     	<label>Status</label>
                     	<select class="form-control" name="status">
                     		<option value="1" {{$ico->status == 1 ? 'selected' : ''}}>Runing</option>
@@ -104,7 +104,7 @@
                     	</select>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-lg btn-success btn-block" >Save</button>
+                        <button type="submit" class="btn btn-lg btn-success btn-block save-btn" >Save</button>
                     </div>
                 </form>
               </div>
@@ -131,37 +131,37 @@
               <div class="modal-body">
                 <form role="form" method="POST" action="{{route('ico.store')}}">
                  {{ csrf_field() }}
-                  <div class="form-group">
+                  <div class="form-group edit-ico-field col-lg-6 no-pad-left">
                         <label>ICO Start Date</label>
-                        <div class="input-group">
-                          <input type="text" name="start" data-date-format="yyyy-mm-dd" class="form-control form-control-inline  date-picker" readonly />
-              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <div class="input-group calend">
+                          <input type="text" name="start" data-date-format="yyyy-mm-dd" class="dark-bottom login-field form-control form-control-inline  date-picker" readonly />
+              <span class="input-group-addon calendar-input"><i class="fa fa-calendar"></i></span>
                         </div>
                     </div> 
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-right">
                         <label>ICO End Date</label>
-                        <div class="input-group">
-                        	<input type="text" name="end" data-date-format="yyyy-mm-dd" class="form-control form-control-inline  date-picker" readonly />
-							<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <div class="input-group calend">
+                        	<input type="text" name="end" data-date-format="yyyy-mm-dd" class="dark-bottom login-field form-control form-control-inline  date-picker" readonly />
+							<span class="input-group-addon calendar-input"><i class="fa fa-calendar"></i></span>
                         </div>
                     </div> 
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-left">
                         <label for="quant" >{{$gnl->cur}} Token (Total Quantity to Sell)</label>
-                        <input type="text" name="quant" class="form-control">
+                        <input type="text" name="quant" class="dark-bottom login-field form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field col-lg-6 no-pad-right">
                         <label for="price">Price</label>
-                        <input type="text" name="price" class="form-control">
+                        <input type="text" name="price" class="dark-bottom login-field form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group edit-ico-field">
                     	<label>Status</label>
                     	<select class="form-control" name="status">
                         <option value="0" selected>Upcoming</option>
                     		<option value="1">Running</option>
                     	</select>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-lg btn-success btn-block" >Save</button>
+                    <div class="form-group edit-ico-field ">
+                        <button type="submit" class="btn btn-lg btn-success btn-block save-btn" >Save</button>
                     </div>
                 </form>
               </div>

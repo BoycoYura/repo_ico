@@ -15,8 +15,7 @@
                                     	{{ csrf_field() }}
                                         <div class="form-body">
                                             <div class="form-group">
-                                                <label>Subject</label>
-                                                <input type="text" name="subject" class="form-control input-lg" value="">
+                                                <input type="text" name="subject" placeholder="Subject" class="login-field form-control input-lg" value="">
                                             </div>
                                             <div class="form-group">
                                                 <label>Email Message</label>
@@ -26,7 +25,7 @@
                                             </div>
                                         </div>
                                         <div class="form-actions">
-                                            <button type="submit" class="submit-btn btn btn-primary btn-lg btn-block login-button">Broadcast Email</button>
+                                            <button type="submit" class="submit-btn broad-email btn btn-primary btn-lg btn-block login-button">Broadcast Email</button>
                                         </div>
                                     </form>
                                 </div>

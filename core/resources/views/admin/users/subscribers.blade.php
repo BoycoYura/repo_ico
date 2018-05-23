@@ -33,8 +33,7 @@
                                     	{{ csrf_field() }}
                                         <div class="form-body">
                                             <div class="form-group">
-                                                <label>Subject</label>
-                                                <input type="text" name="subject" class="form-control input-lg" value="">
+                                                <input type="text" placeholder="Subject" name="subject" class="login-field form-control input-lg" value="">
                                             </div>
                                             <div class="form-group">
                                                 <label>Email Message</label>

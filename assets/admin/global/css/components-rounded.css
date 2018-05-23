@@ -7267,6 +7267,10 @@ Custom color buttons
 .input-medium {
   width: 240px !important; }
 
+.date-field{
+  width: 100%!important;
+}
+
 .input-large {
   width: 320px !important; }
 
@@ -13327,6 +13331,14 @@ Customized Bootstrap Tables
   padding: 13px!important;
   line-height: 0!important;
   vertical-align: middle!important;
+}
+
+table .need-cell{
+  line-height: 25px!important;
+}
+
+.need-cell .progress-bar{
+  line-height: 35px!important;
 }
 
 .table-hover>tbody>tr:hover, .table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active {

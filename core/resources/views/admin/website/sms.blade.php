@@ -9,7 +9,7 @@
 </div>
 <div class="row">
 	<div class="col-md-12">
-		<div class="portlet box green">
+		<div class="portlet sms-portlet box green">
 			<div class="portlet-title">
 				<div class="caption">
 					<i class="fa fa-bookmark"></i>Short Code</div>
@@ -48,33 +48,34 @@
 				</div>
 			</div>
 		</div>
+	<div class="col-md-12">
+		<div class="portlet sms-portlet light bordered">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-envelope font-blue-sharp"></i>
+					<span class="caption-subject font-blue-sharp bold uppercase">SMS Api</span>
+				</div>
+			</div>
+			<div class="portlet-body form">
+				<form role="form" method="POST" action="{{route('sms.update')}}" >
+					{{ csrf_field() }}
+					<div class="form-body">
+						<div class="form-group">
+							<label>SMS API</label>
+							<input type="text" name="smsapi" class="form-control" value="{{$temp->smsapi}}">
+						</div>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn green btn-block btn-lg">Update</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 	</div>
 
 	<div class="row">
-		<div class="col-md-12">
-			<div class="portlet light bordered">
-				<div class="portlet-title">
-					<div class="caption">
-						<i class="icon-envelope font-blue-sharp"></i>
-						<span class="caption-subject font-blue-sharp bold uppercase">SMS Api</span>
-					</div>
-				</div>
-				<div class="portlet-body form">
-					<form role="form" method="POST" action="{{route('sms.update')}}" >
-						{{ csrf_field() }}
-						<div class="form-body">
-							<div class="form-group">
-								<label>SMS API</label>
-								<input type="text" name="smsapi" class="form-control" value="{{$temp->smsapi}}">
-							</div>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn green btn-block btn-lg">Update</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+
 	</div>
 	
 	@endsection
