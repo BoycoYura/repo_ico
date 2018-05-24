@@ -1391,3 +1391,12 @@ border-radius: 50px!important;
   padding-left: 10px;
   padding-right: 5px;
 }
+
+.gateway-body .panel-primary{
+  /*display: flex;*/
+  /*flex-direction: row-reverse;*/
+}
+
+.gateway-body .panel-body img{
+  width: 50%!important;
+}

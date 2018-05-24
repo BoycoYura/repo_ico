@@ -8011,7 +8011,7 @@ body .bootstrap-datetimepicker-widget table td {
 .top-menu .nav>li:hover>a,
 .top-menu .nav>li>a:focus,
 .top-menu .nav>li>a:hover {
-    background: #232a2f
+    background: #353535!important
 }
 
 .top-menu .nav .sub-menu {
@@ -9099,7 +9099,7 @@ box-shadow: 0px 1px 9px 0px black;
 }
 
 .factor-auth{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     border-radius: 3px!important;
     background: #f15e29!important;
@@ -9115,18 +9115,30 @@ box-shadow: 0px 1px 9px 0px black;
 
 .download-app{
     margin: 0 auto;
-    display: block;
-    width: 50%;
-    background: #f15e29!important;
-    border-color: #f15e29!important;
+    width: 40%;
+    background: black!important;
+    border-radius: 8px;
+    border-color: black!important;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .go-auth-panel{
     width: 70%!important;
     margin: 0 auto!important;
     margin-top: 20px!important;
+    text-align: center;
 }
+
+.app-ico{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
 
 .download-app:hover{
     background:  #182140!important;
@@ -9244,7 +9256,7 @@ select.form-control{
 }
 
 .top-right-admin-part{
-    width: 86%;
+    width: 86.5%;
     background-color: transparent;
     height: 50px;
     margin-bottom: 10px;
@@ -9671,5 +9683,43 @@ select.form-control{
     border-radius: 50px;
     font-size: 15px;
 }
+
+.tokens-info{
+    font-size: 20px;
+    color: white;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+
+.tokens-info span{
+    font-size: 26px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tokens-info-coin{
+    font-size: 20px;
+    color: white;
+    padding-right: 30px;
+    margin-top: 21.5px;
+}
+
+.balance-text{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.balance-text select{
+    background: transparent;
+    border: none!important;
+    outline: none;
+    cursor: pointer;
+}
+
+option{
+    cursor: pointer;
+}
+
+=
 
 

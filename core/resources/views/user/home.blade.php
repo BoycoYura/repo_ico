@@ -5,17 +5,34 @@
     <div class="top-right-admin-part">
         <div class="top-menu">
             <ul class="nav navbar-nav pull-right">
+                <li class="tokens-info-coin">BTC: <span class="cion-value">$20.00</span></li>
+
+                <li class="tokens-info-coin">ETH: <span class="cion-value">$10.00</span></li>
+                <li class="tokens-info">
+                    <p class="balance-text">Your balance
+                        <select name="" id="">
+                            <option value="">
+                                <p><span>0</span> BTC</p>
+                            </option>
+
+                            <option value="">
+                                <p><span>0</span> ETH</p>
+                            </option>
+
+                            <option value="">
+                                <p><span>0</span> USD</p>
+                            </option>
+                        </select>
+                    </p>
+                </li>
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle drop-link" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                         <span class="icon-settings-first">
                               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1C4.58 1 1 4.58 1 9s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 2.75c1.24 0 2.25 1.01 2.25 2.25S10.24 8.25 9 8.25 6.75 7.24 6.75 6 7.76 3.75 9 3.75zM9 14.5c-1.86 0-3.49-.92-4.49-2.33C4.62 10.72 7.53 10 9 10c1.47 0 4.38.72 4.49 2.17-1 1.41-2.63 2.33-4.49 2.33z"/></svg>
                         </span>
-<<<<<<< HEAD
-=======
                         <span class="username username-hide-on-mobile">
                             {{{ isset(Auth::user()->email) ? Auth::user()->email : "" }}}
                         </span>
->>>>>>> 031df367cf21c180bead57966100b8be971b0250
                         <i class="fa fa-angle-down"></i>
                     </a>
 
@@ -147,11 +164,11 @@
                        Note, that all fields must be filled in English.
                    </p>
 
-                   <div class="deposit-foot">
-                       <input class="deposit-input"  type="text" placeholder="Firstname">
-                       <input class="deposit-input" type="text" placeholder="Lastname">
-                       <input class="deposit-submit" value="Submit" type="submit">
-                   </div>
+                   {{--<div class="deposit-foot">--}}
+                       {{--<input class="deposit-input"  type="text" placeholder="Firstname">--}}
+                       {{--<input class="deposit-input" type="text" placeholder="Lastname">--}}
+                       {{--<input class="deposit-submit" value="Submit" type="submit">--}}
+                   {{--</div>--}}
                </div>
 
                <div class="step-half four-step-info">
