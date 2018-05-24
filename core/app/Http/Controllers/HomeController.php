@@ -33,10 +33,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::find(Auth::id());
-        $background = $user->background;
         $nexts = Ico::where('status', '!=', 2)->where('status', '!=', 3)->get();
-        return view('user.home', compact('nexts', 'background'));
+        return view('user.home', compact('nexts'));
     }
 
     public function myCoin()

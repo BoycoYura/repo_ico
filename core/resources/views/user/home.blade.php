@@ -41,38 +41,9 @@
                     <div class=" drop-settings-inner close-drop">
                         <div>
                             <p class="scheme-title">Color scheme</p>
-                            <div class="customize-items">
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}" alt="scheme-1.jpg">
-                                    </div>
-                                </div>
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}" alt="scheme-2.jpg">
-                                    </div>
-                                </div>
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}" alt="scheme-1.jpg">
-                                    </div>
-                                </div>
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}" alt="scheme-2.jpg">
-                                    </div>
-                                </div>
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-1.jpg') }}" alt="scheme-1.jpg">
-                                    </div>
-                                </div>
-                                <div class="item-body">
-                                    <div class="item">
-                                        <img src="{{asset('assets/images/background-scheme/scheme-2.jpg') }}" alt="scheme-2.jpg">
-                                    </div>
-                                </div>
-                            </div>
+
+                            @include('partials.customizer')
+
                         </div>
                     </div>
                 </li>

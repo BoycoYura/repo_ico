@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use phpDocumentor\Reflection\File;
 
 class User extends Authenticatable
 {
@@ -30,5 +33,11 @@ class User extends Authenticatable
     public function sell()
     {
         return $this->hasMany('App\Sell', 'id', 'user_id');
+    }
+
+    public static function background()
+    {
+        $user = User::find(Auth::id());
+        return $user->background;
     }
 }

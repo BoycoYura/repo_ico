@@ -18,9 +18,7 @@ class ProfileController extends Controller
     {
         $profile = User::find(Auth::id());
 
-        $background = $profile->background;
-
-        return view('user.profile', compact('profile', 'background'));
+        return view('user.profile', compact('profile'));
     }
 
     public function update(Request $request)

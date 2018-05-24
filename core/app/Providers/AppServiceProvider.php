@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use App\General;
 use App\Ico;
+use App\User;
+use App\General;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -60,6 +61,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        view()->composer('layouts.user', function ($view){
+            $view->with('background', User::background());
+        });
     }
 }
