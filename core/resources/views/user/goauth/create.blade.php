@@ -95,12 +95,13 @@
    <div class="panel-heading no-back-black">
       <h4 class="panel-title">Google Authenticator</h4>
     </div>
-  <div class="panel-body text-justify">
+  <div class="panel-body ">
       <h5 style="text-transform: capitalize;">Use Google Authenticator to Scan the QR code  or use the code</h5><hr/>
       <p>
         Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device.
       </p>
-<a class="btn btn-success btn-md download-app" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">DOWNLOAD APP</a>
+<a class="btn btn-success btn-md download-app" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">
+    <img class="app-ico" src="../../../../../assets/images/icons/New-Play-Store-logo.png" alt="">DOWNLOAD APP</a>
   </div>
 </div>
 </div>
@@ -167,7 +168,7 @@
             </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default app-download" data-dismiss="modal">Close</button>
       </div>
     </div>
 

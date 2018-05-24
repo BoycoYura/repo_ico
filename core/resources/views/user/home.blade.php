@@ -5,6 +5,26 @@
     <div class="top-right-admin-part">
         <div class="top-menu">
             <ul class="nav navbar-nav pull-right">
+                <li class="tokens-info-coin">BTC: <span class="cion-value">$20.00</span></li>
+
+                <li class="tokens-info-coin">ETH: <span class="cion-value">$10.00</span></li>
+                <li class="tokens-info">
+                    <p class="balance-text">Your balance
+                        <select name="" id="">
+                            <option value="">
+                                <p><span>0</span> BTC</p>
+                            </option>
+
+                            <option value="">
+                                <p><span>0</span> ETH</p>
+                            </option>
+
+                            <option value="">
+                                <p><span>0</span> USD</p>
+                            </option>
+                        </select>
+                    </p>
+                </li>
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle drop-link" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                         <span class="icon-settings-first">
@@ -51,53 +71,104 @@
         </div>
     </div>
     <div class="col-md-12">
-       <div class="panel main-page-panel">
-                <div class="panel-heading">
-                   <h4 class="panel-title ">ICO Calender</h4>
-                </div>
-            <div class="panel-body  ">
-        @foreach($nexts as $next)
-            <div class="col-md-4">
-                <div class="panel  panel-{{$next->status == 1? 'success': 'inverse'}}">
-                        <div class="panel-heading no-back">
-                           <h4 class="panel-title">{{$next->status == 1? 'Runing': 'Upcoming'}} ICO 
-                           </h4>
-                        </div>
-                        <div class="panel-body text-center">
-                            <ul class="list-group">
-                                <li class="list-group-item">Price: <strong>{{$next->price}} USD</strong></li>
-                                <li class="list-group-item">Start At: <strong>{{$next->start}}</strong></li>
-                                <li class="list-group-item">End At: <strong>{{$next->end}}</strong></li>
-                                <li class="list-group-item">Total Quantity: <strong>{{$next->quant}} {{$gnl->cur}}</strong></li>
-                                <li class="list-group-item">Sold: <strong>{{$next->sold}} {{$gnl->cur}}</strong></li>
-                                <div class="sold-li">
-                                    <span class="sold-text">{{round(($next->sold/$next->quant)*100,2)}}% Sold</span>
-                                    <li class="list-group-item progres-item">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{round(($next->sold/$next->quant)*100,2)}}"
-                                                 aria-valuemin="0" aria-valuemax="100" style="width:{{round(($next->sold/$next->quant)*100,2)}}%">
-                                                <span class="progreess-circle"></span>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </div>
-
-                            </ul>
-                        </div>
-                         @if($next->status==1)
-                          <div class="panel-footer text-center">
-                                <a class="btn btn-success btn-lg btn-block" href="{{route('buy.ico')}}">Buy Now</a>
-                            </div>
-                          @else
-                          <div class="panel-footer text-center">
-                                <a class="btn btn-warning btn-lg btn-block disabled" href="#">Coming...</a>
-                            </div>
-                        @endif
+       <div class="main-page-panel">
+               <div class="step-half first-step-info">
+                    <h2 class="info-header">Welocme  to your account!</h2>
+                    <p class="info-text">Here you will be able to deposit funds and purchase Smart Valley Tokens</p>
+                    <div class="flex-info">
+                        <a class="info-item" href="#">How to buy tokens?</a>
+                        <a class="info-item" href="#">Как купить токены?</a>
                     </div>
-            </div>
-        @endforeach
-            </div>
+                </div>
+
+               <div class="step-half second-step-info">
+               <p class="step-number">STEP 1</p>
+               <h2 class="info-header">Plan your Smart Valley tokens purchase</h2>
+               <p class="info-text">You can buy Smart Valley tokens using BTC or ETH.</p>
+               <p class="info-text">The calculator is provided for your convenience.
+                   You can enter a number of Smart Valley tokens you want to buy and calculate the amount
+                   you would need to have in your account wallets.</p>
+               <p class="info-text">Please note that the price of the tokens will be calculated at the time
+                   of the actual token purchase and not at the time of the funds deposit.</p>
+               <div class="flex-buy">
+                   <div class="buy-item">
+                       <input type="text" placeholder="10" class="input-buy">
+                       <p class="under-input" >Smart Valley</p>
+
+                       <div class="buy-foot">
+                           <p class="foot-text">0% BONUS:</p>
+                           <p class="foot-text">0</p>
+                       </div>
+                   </div>
+
+                   <div class="buy-line">
+                       <span class="glyphicon glyphicon-arrow-right"></span>
+                   </div>
+                   
+                   <div class="buy-item">
+                       <input type="text" placeholder="1.00" class="input-buy">
+                       {{--<img src="../../../../assets/images/icons/" alt="">--}}
+                       <div class="select-body">
+                           <select name="" id="">
+                               <option value="">USD</option>
+                               <option value="">Bitcoin</option>
+                               <option value="">Ethereum</option>
+                           </select>
+                       </div>
+
+                       <div class="buy-foot">
+                           <p class="foot-text">TOTAL:</p>
+                           <p class="foot-text">10</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+               <div class="step-half three-step-info">
+                   <p class="step-number">STEP 2</p>
+                   <h2 class="info-header">Make a deposit</h2>
+                   <p class="info-text">Please enter ETH wallet in your profile. After SVT tokens will be released,
+                       they will be sent to this wallet. It is not necessary to deposit ETH from this address.
+                       You can send ETH directly from stock exchange wallet to the address indicated below.</p>
+                   <p class="info-text">You need to follow the KYC to receive tokens after the end of sales.
+                       Please enter your First Name and Last Name and press ‘Submit’ button to start the KYC process.
+                       Note, that all fields must be filled in English.
+                   </p>
+
+                   {{--<div class="deposit-foot">--}}
+                       {{--<input class="deposit-input"  type="text" placeholder="Firstname">--}}
+                       {{--<input class="deposit-input" type="text" placeholder="Lastname">--}}
+                       {{--<input class="deposit-submit" value="Submit" type="submit">--}}
+                   {{--</div>--}}
+               </div>
+
+               <div class="step-half four-step-info">
+                   <p class="step-number">STEP 3</p>
+                   <h2 class="info-header">Buy SVT tokens</h2>
+                   <div class="flex-amount">
+                       <p class="info-title">Amount:</p>
+                       <p class="coin-amount">10</p>
+                   </div>
+
+                   <div class="checkbox">
+                       <label>
+                           <input type="checkbox" value="">
+                           I hereby confirm that I have completely read, fully understood and accepted this Token <a
+                                   href="">Sale Agreement</a>.
+                       </label>
+                   </div>
+
+                   <div class="checkbox">
+                       <label>
+                           <input type="checkbox" value="">
+                           I understand that for the purpose of securing of my funds, the payment for SVT tokens will be sent via the independent agent.
+                       </label>
+                   </div>
+               </div>
+
+               <div class="step-half footer-steps">
+                   <input class="deposit-submit" value="BUY NOW" type="submit">
+               </div>
         </div>
     </div>
 </div>
