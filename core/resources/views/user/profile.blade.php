@@ -82,7 +82,9 @@
     <div class="col-md-12">
        <div class="panel">
                 <div class="panel-heading no-back-black">
-                   <h4 class="panel-title ">{{Auth::user()->name}}</h4>
+                   <h4 class="panel-title ">
+                       {{ isset(Auth::user()->name) ? Auth::user()->name : "User profile" }}
+                   </h4>
                 </div>
             <div class="panel-body">
                 <form role="form" method="POST" action="{{route('profile.update')}}" enctype="multipart/form-data">
