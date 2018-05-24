@@ -1178,15 +1178,12 @@ border-radius: 50px!important;
 }
 
 .gateways-body .panel-heading{
-
+  height: 300px;
   border: none;
   border-color: transparent;
-  text-align: left;
+  font-size: 30px;
+  text-align: center;
   padding-left: 30px;
-  border-bottom: 1px solid white;
-  background: #1d2233;
-  background: -webkit-linear-gradient(to right, #1d2233, #414965);
-  background: linear-gradient(to right, #1d2233, #414965);
 }
 
 .gateways-body .list-group-item{
@@ -1200,18 +1197,21 @@ border-radius: 50px!important;
 
 .gateways-body .btn-block {
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 1;
+  border: none;
   background: #182140;
 }
 
 .gateways-body .btn-block:hover{
   opacity: 1;
+  border: none;
 }
 
 
 .gateways-body .btn-success {
-  opacity: 0.6;
+  opacity: 1!important;
   background: #219a68;
+  border: none;
 }
 
 .gateways-body .btn-success:hover{
@@ -1220,6 +1220,10 @@ border-radius: 50px!important;
 
 .gateways-body .panel-body {
   padding: 0px;
+
+  background: #1d2233;
+  background: -webkit-linear-gradient(to right, #1d2233, #414965);
+  background: linear-gradient(to right, #1d2233, #414965);
 }
 
 .new-ico-btn{
@@ -1277,25 +1281,31 @@ border-radius: 50px!important;
 
 
 
-.gateways-body .panel-heading:before{
-  content: '';
-  width: 5px;
-  height: 5px;
-  background: #f7931b;
-  position: relative;
-  bottom: 2px;
-  display: inline-block;
-  margin-right: 5px;
-  border-radius: 20px;
-}
+/*.gateways-body .panel-heading:before{*/
+  /*content: '';*/
+  /*width: 5px;*/
+  /*height: 5px;*/
+  /*background: #f7931b;*/
+  /*position: relative;*/
+  /*bottom: 2px;*/
+  /*display: inline-block;*/
+  /*margin-right: 5px;*/
+  /*border-radius: 20px;*/
+/*}*/
 
 .gateways-body .button-section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-top: 0;
   padding: 0;
-  margin-top: -35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.gate-body{
+  display: flex;
 }
 
 .nicEdit-main{
@@ -1398,5 +1408,16 @@ border-radius: 50px!important;
 }
 
 .gateway-body .panel-body img{
-  width: 50%!important;
+  height: 250px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.left-gate-part{
+  display: flex;
+  width: 50%;
+}
+
+.right-gate-part{
+  width: 50%;
 }

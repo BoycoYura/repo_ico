@@ -16,20 +16,25 @@
 
 <div class="col-md-6 gateway-body">
 <div class="panel panel-primary">
-<div class="panel-heading text-center">
-{{$gateway->name}}
-</div>
+
 <div class="panel-body">
-    <ul class="list-group">
-        <li class="list-group-item no-flex"><img src="{{asset('assets/images/gateway')}}/{{$gateway->gateimg}}" style="width: 100%;">
-</li>
-        <li class="list-group-item no-flex button-section">
-    <strong class="btn btn-block btn-{{$gateway->status == 1 ? 'success' : 'danger'}}">{{$gateway->status == 1 ? 'Active' : 'Deactive'}}</strong>
-    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal{{$gateway->id}}">
-        Edit
-    </button>
-</li>
-    </ul>
+    <div class="list-group gate-body">
+        <div class="list-group-item no-flex left-gate-part">
+            <img src="{{asset('assets/images/gateway')}}/{{$gateway->gateimg}}" style="width: 100%;">
+        </div>
+
+        <div class="right-gate-part">
+            <div class="panel-heading text-center ">
+                {{$gateway->name}}
+            </div>
+        </div>
+    </div>
+    <div class="list-group-item no-flex button-section">
+        <strong class="btn btn-block btn-{{$gateway->status == 1 ? 'success' : 'danger'}}">{{$gateway->status == 1 ? 'Active' : 'Deactive'}}</strong>
+        <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal{{$gateway->id}}">
+            Edit
+        </button>
+    </div>
 </div>
 </div>				
 </div>
